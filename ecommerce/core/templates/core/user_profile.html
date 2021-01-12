@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+     <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+    <br>
+    <br>
+
+
+    <main>
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h2 class="m-0 font-weight-bold ">Sneakers in vendita di @{{ user }}</h2>
+            </div>
+            <div class="container">
+                <div class="card-body d-inline p-2">
+                    {% for item in items_utente%}
+
+                        <div class="card " style="display: inline-block;width: 33%;">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="{{item.get_absolute_url}}"> {{item.nome}} </a></h4>
+                                <h5><img src="{{ item.immagine.url }}" class="card-img-top"></h5>
+                                <h6 class="card-subtitle mb-2 text-muted"> Taglia: {{item.tagliaEU}} </h6>
+                                <br>
+
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+            <br>
+            <br>
+            <h5>Vuoi contattare  @{{ user }}?</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Indirizzo mail :  {{ user.email }}</h6>
+        </div>
+        </div>
+        <!--Pagination-->
+
+        <nav class="d-flex justify-content-center wow fadeIn">
+            <ul class="pagination pg-blue">
+
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item active">
+                    <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+
+
+    </main>
+
+
+{% endblock content %}

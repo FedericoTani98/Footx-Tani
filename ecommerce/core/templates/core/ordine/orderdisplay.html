@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+ <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+<br>
+    <br>
+    <main>
+        <h2> Dettagli dell'ordine</h2>
+        <br>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col"> Nome</th>
+                <th scope="col"> Taglia</th>
+                <th scope="col"> Condizione</th>
+                <th scope="col"> Prezzo</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order_item in listacquisti%}
+                <tr>
+                    <td><a href="{{ order_item.product.get_absolute_url }}" >{{ order_item.product.nome}}</a></td>
+
+                    <td>{{ order_item.product.tagliaEU }}</td>
+                    <td>{% if order_item.product.condizioni == 'U' %}
+                        <h6  style="color: red"> {{ order_item.product.get_condizioni_display }} </h6>
+                    {% else %}
+                        <h6  style="color: green"> {{ order_item.product.get_condizioni_display }} </h6>
+                    {% endif %} </td>
+                    <td>{{ order_item.product.prezzo}} €</td>
+                </tr>
+            {% endfor %}
+
+
+
+            </tbody>
+        </table>
+
+
+
+
+
+    </main>
+
+{% endblock content %}

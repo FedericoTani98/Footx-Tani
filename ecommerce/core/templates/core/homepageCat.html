@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+    <br>
+    <br>
+    <h1> Pagina della categoria selezionata </h1>
+    <main>
+        {% if not object_list %}
+            <br>
+            <br>
+            <br>
+            <h4 class="text-muted">Ci dispiace! Non ci sono articoli per questa categoria!</h4>
+        {% endif %}
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+                <!-- Navbar brand -->
+                <span class="navbar-brand">Categorie:</span>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Tutti
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- Links -->
+
+                    <!-- Collapsible content -->
+
+                </div>
+            </nav>
+
+
+            <!--Section: Products v.3-->
+            <section class="text-center mb-4">
+
+                <div class="row wow fadeIn">
+
+                    {% for item in object_list %}
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <div class="card">
+
+                                <div class="view overlay">
+                                    {% if item.immagine %}
+                                        <img src="{{ item.immagine.url }}" class="card-img-top" >
+                                    {% endif %}
+                                    <a href="{{ item.get_absolute_url }}">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+                                <div class="card-body text-center">
+
+                                    <h3>{{ item.get_categoria_display }}</h3>
+
+                                    <h5>
+                                        <strong>
+                                            <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.nome }}
+                                            </a>
+                                        </strong>
+                                    </h5>
+
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>
+
+                                            {{ item.prezzo }} € {% if item.condizioni == 'U' %}
+                                            <h6  style="color: red"> {{ item.get_condizioni_display }} </h6>
+                                        {% else %}
+                                            <h6  style="color: green"> {{ item.get_condizioni_display }} </h6>
+                                        {% endif %}
+
+                                        </strong>
+
+                                    </h4>
+                                    <p class="text-muted">{{ item.data|timesince }} fa</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+                </div>
+
+            </section>
+            <!--Section: Products v.3-->
+
+            <!--Pagination-->
+
+
+            <nav class="d-flex justify-content-center wow fadeIn">
+                <ul class="pagination pg-blue">
+
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item active">
+                        <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+
+        </div>
+    </main>
+
+{% endblock content %}

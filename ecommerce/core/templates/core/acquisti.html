@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+
+
+
+       <div class="mt-5 pt-4">
+<h2>Acquisti</h2>
+       <br>
+</div>
+<div>
+<table class="table"  id="UserTable">
+    <thead>
+        <tr>
+            <th> Numero Ordine </th>
+            <th> Spesa </th>
+            <th> Data</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in listacquisti %}
+        <tr>
+            <td><a href="{% url 'order-display' pk=item.order.id %}">{{ item.id }}</a></td>
+            <td>{{ item.amount }} € </td>
+            <td>{{ item.timestamp }} </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+</div>
+
+
+
+
+{% endblock content %}

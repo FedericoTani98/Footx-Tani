@@ -1,0 +1,119 @@
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/bootstrap.min.css */
+*,::after,::before{box-sizing:border-box;}
+h3{margin-top:0;margin-bottom:.5rem;}
+p{margin-top:0;margin-bottom:1rem;}
+ul{margin-top:0;margin-bottom:1rem;}
+a{color:#007bff;text-decoration:none;background-color:transparent;}
+a:hover{color:#0056b3;text-decoration:underline;}
+img{vertical-align:middle;border-style:none;}
+h3{margin-bottom:.5rem;font-weight:500;line-height:1.2;}
+h3{font-size:1.75rem;}
+@media print{
+        *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+        a:not(.btn){text-decoration:underline;}
+        img{page-break-inside:avoid;}
+        h3,p{orphans:3;widows:3;}
+        h3{page-break-after:avoid;}
+}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/line-awesome.css */
+.la{display:inline-block;font:normal normal normal 16px/1 "LineAwesome";font-size:inherit;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;}
+.la-bookmark:before{content:"\f14f";}
+.la-ellipsis-v:before{content:"\f1c4";}
+.la-envelope:before{content:"\f1c6";}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/line-awesome-font-awesome.min.css */
+.fa-eye:before{content:"\f1d4";}
+.fa-heart:before{content:"\f233";}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/vendor/fontawesome-free/css/all.min.css */
+.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}
+.fa-comment-alt:before{content:"\f27a";}
+.fa-eye:before{content:"\f06e";}
+.fa-heart:before{content:"\f004";}
+.fas{font-family:"Font Awesome 5 Free";}
+.fas{font-weight:900;}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/font-awesome.min.css */
+.fa-heart:before{content:"\f004";}
+.fa-eye:before{content:"\f06e";}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/style.css */
+div,span,h3,p,a,img,i,ul,li{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+ul{list-style:none;}
+a:hover{text-decoration:none;}
+*{margin:0;padding:0;}
+a:focus{text-decoration:none;outline:none;}
+a:hover{color:#fff;}
+img{float:left;}
+p{font-size:14px;line-height:24px;color:#666666;}
+img{max-width:100%;}
+.ed-opts > a,.bk-links li a,.like-com li a{-webkit-transition:all 0.4s ease-in;-moz-transition:all 0.4s ease-in;-ms-transition:all 0.4s ease-in;-o-transition:all 0.4s ease-in;transition:all 0.4s ease-in;}
+.post-bar,.bk-links li i{-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:3px;}
+.post-bar{float:left;width:100%;background-color:#fff;border-left:1px solid #e4e4e4;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;margin-bottom:20px;padding:20px;box-shadow:0px 2px #e4e4e4;}
+.post_topbar{float:left;width:100%;position:relative;}
+.usy-dt{float:left;}
+.usy-dt img{-webkit-border-radius:100px;-moz-border-radius:100px;-ms-border-radius:100px;-o-border-radius:100px;border-radius:100px;margin-top:2px;}
+.ed-opts{float:right;position:relative;top:7px;}
+.ed-opts > a{color:#b2b2b2;font-size:24px;float:right;position:relative;left:10px;top:-10px;}
+.ed-options{position:absolute;top:100%;right:0;width:130px;background-color:#fff;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.28);-moz-box-shadow:0 0 10px rgba(0,0,0,0.28);-ms-box-shadow:0 0 10px rgba(0,0,0,0.28);-o-box-shadow:0 0 10px rgba(0,0,0,0.28);box-shadow:0 0 10px rgba(0,0,0,0.28);padding:20px;opacity:0;visibility:hidden;z-index:0;}
+.ed-options li{float:left;width:100%;margin-bottom:15px;}
+.ed-options li:last-child{margin-bottom:0;}
+.ed-options li a{color:#686868;font-size:14px;font-weight:600;}
+.ed-opts > a:hover{color:#e44d3a;}
+.usy-name{float:left;margin-left:15px;}
+.usy-name h3{color:#000000;font-size:18px;text-transform:capitalize;font-weight:600;margin-bottom:5px;margin-top:2px;}
+.usy-name span{color:#b2b2b2;font-size:14px;}
+.usy-name img{margin-top:4px;margin-right:6px;}
+.epi-sec{float:left;width:100%;padding:0;}
+.descp{float:left;margin-top:15px;margin-bottom:15px;}
+.descp li{display:inline-block;margin-right:15px;}
+.descp li span{color:#b2b2b2;font-size:14px;float:left;}
+.descp li img{margin-right:5px;}
+.bk-links{float:right;}
+.bk-links li{display:inline-block;margin-right:7px;}
+.bk-links li:last-child{margin-right:0;}
+.bk-links li i{color:#fff;font-size:24px;width:33px;height:30px;padding-left:0px;background-color:#53d690;text-align:center;line-height:30px;}
+.bk-links li i.la-envelope{background-color:#e44d3a;}
+.job_descp{float:left;width:100%;}
+.job_descp h3{color:#333;font-size:16px;font-weight:600;margin-bottom:15px;}
+.job-dt{float:left;width:100%;margin-bottom:22px;}
+.job-dt li{display:inline-block;margin-right:15px;}
+.job-dt li a{color:#fff;background-color:#53d690;text-transform:capitalize;padding:5px 13px;-webkit-border-radius:30px;-moz-border-radius:30px;-ms-border-radius:30px;-o-border-radius:30px;border-radius:3px;display:inline-block;font-size:14px;font-weight:500;}
+.job-dt li span{color:#333;font-size:16px;font-weight:600;}
+.job_descp > p{color:#666666;font-size:15px;line-height:24px;margin-bottom:20px;}
+.job_descp > p a{color:#e44d3a;font-weight:600;}
+.skill-tags{float:left;width:100%;margin-bottom:15px;}
+.skill-tags li{display:inline-block;margin-right:6px;margin-bottom:10px;}
+.skill-tags li a{display:inline-block;color:#b2b2b2;font-size:14px;background-color:#f1f1f1;-webkit-border-radius:30px;-moz-border-radius:30px;-ms-border-radius:30px;-o-border-radius:30px;border-radius:30px;padding:7px 15px;font-weight:500;}
+.job-status-bar{float:left;width:100%;}
+.like-com{float:left;margin-top:20px;}
+.like-com li{display:inline-block;margin-right:15px;}
+.like-com li a{color:#b2b2b2;font-size:14px;font-weight:500;float:left;margin-top:6px;margin-right:5px;}
+.like-com li a:hover{color:#e44d3a;}
+.like-com li a i{margin-right:2px;font-size:14px;position:relative;top:2px;}
+.like-com li span{color:#ffffff;font-size:13px;width:30px;height:30px;background-color:#e44d3a;line-height:30px;-webkit-border-radius:30px;-moz-border-radius:30px;-ms-border-radius:30px;-o-border-radius:30px;border-radius:30px;float:left;text-align:center;font-weight:600;margin-left:-25px;}
+.like-com li .com{position:relative;top:-9px;}
+.job-status-bar > a{float:right;color:#b2b2b2!important;font-size:14px;margin-top:29px;cursor:pointer;}
+.job-status-bar > a:hover{color:#e44d3a!important;}
+.job-status-bar > a i{font-size:14px;margin-right:7px;position:relative;top:1px;}
+::-webkit-input-placeholder{color:#b2b2b2;}
+::-moz-placeholder{color:#b2b2b2;}
+:-ms-input-placeholder{color:#b2b2b2;}
+:-moz-placeholder{color:#b2b2b2;}
+a:hover{color:initial;}
+.job-status-bar{border-top:1px solid #e5e5e5;}
+.job-dt li a{background-color:#51a5fb;}
+/*! CSS Used from: http://gambolthemes.net/workwise-new/css/responsive.css */
+@media (max-width: 576px){
+        .like-com li{margin-right:5px;}
+        .bk-links{width:100%;margin-top:15px;}
+        .bk-links{margin-bottom:10px;}
+        .like-com li{float:left;width:100%;margin-bottom:15px;}
+        .job-status-bar > a{float:left;width:100%;margin-top:-5px;}
+}
+@media (max-width: 410px){
+        .like-com li a{font-size:12px;}
+        .job_descp h3{font-size:16px;}
+        .ed-opts > a{position:absolute;}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:"LineAwesome";src:url("http://gambolthemes.net/workwise-new/fonts/line-awesome.eot?v=1.1.");src:url("http://gambolthemes.net/workwise-new/fonts/line-awesome.eot?v=1.1.#iefix") format("embedded-opentype"),        url("http://gambolthemes.net/workwise-new/fonts/line-awesome.woff2?v=1.1.") format("woff2"),        url("http://gambolthemes.net/workwise-new/fonts/line-awesome.woff?v=1.1.") format("woff"),        url("http://gambolthemes.net/workwise-new/fonts/line-awesome.ttf?v=1.1.") format("truetype"),        url("http://gambolthemes.net/workwise-new/fonts/line-awesome.svg?v=1.1.#fa") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:"LineAwesome";src:url("http://gambolthemes.net/workwise-new/fonts/line-awesome.svg?v=1.1.#fa") format("svg");}
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.eot);src:url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.eot#iefix) format("embedded-opentype"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.woff2) format("woff2"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.woff) format("woff"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.ttf) format("truetype"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome) format("svg");}
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.eot);src:url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.eot#iefix) format("embedded-opentype"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.woff2) format("woff2"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.woff) format("woff"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.ttf) format("truetype"),url(http://gambolthemes.net/workwise-new/vendor/fontawesome-free/webfonts/fa-solid-900.svg#fontawesome) format("svg");}

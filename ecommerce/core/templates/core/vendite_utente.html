@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+
+
+
+    <main>
+        <div class="mt-5 pt-4">
+            <h2>Vendite</h2>
+            <a href="{% url 'user-grafico-vendite'  username=request.user.username %}"  class="far fa-chart-bar fa-3x float-right" ></a>
+
+        </div>
+    <br>
+        <div>
+            <table class="table"  id="UserTable">
+                <thead>
+                <tr>
+                    <th> Nome </th>
+                    <th> Prezzo di vendita </th>
+                    <th> Compratore</th>
+                    <th>Indirizzo di spedizione</th>
+                    <th>Data di vendita</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for item in items_utente%}
+                    <tr>
+                        <td><a href="{{item.get_absolute_url }}" >{{item.nome}}</a></td>
+
+                        <td> {{item.prezzo}} € </td>
+                        <td>{{ item.compratore }} </td>
+                        <td>{{ item.address}} </td>
+                        <td>{{ item.data}} </td>
+
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+            <!--Pagination-->
+            <nav class="d-flex justify-content-center wow fadeIn">
+                <ul class="pagination pg-blue">
+
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item active">
+                        <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+
+    </main>
+
+{% endblock content %}

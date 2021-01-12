@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+{%  load static %}
+{% block title %}Language Delete{%  endblock %}
+
+{% block content %}
+
+    <div class="card " style="display: inline-block;width: 33%;">
+        <div class="card-body">
+        <h4 class="card-title">Cancella Item</h4>
+        <h5 class="card-subtitle mb-2 text-muted">Vuoi davvero cancellare l'item col nome {{ object.nome }} che hai messo in vendita?</h5>
+            <br>
+        <h6 class="card-subtitle mb-2 text-muted"> Taglia : {{ object.tagliaEU }} </h6>
+            <br>
+        <form method="post">{%  csrf_token %}
+       <input class="btn btn-danger" type="submit" value="Elimina">
+        <a class="btn btn-secondary float-right" href="{%  url 'user_profile' username=request.user.username %}">Indietro</a>
+    </form>
+
+        </div>
+    </div>
+{% endblock content %}

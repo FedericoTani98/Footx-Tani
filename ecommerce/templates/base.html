@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+
+    <title>FootX</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+
+    <a href="/"><img  style="width: 4rem;"  src="https://cdn.discordapp.com/attachments/461535390541807617/748947547728642199/trMpUKW-_400x400.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container">
+            <form class="form-inline my-2 my-lg-0" action="{% url 'cerca' %}">
+                <input name="q" class="inputCerca form-control mr-sm-2" type="" placeholder="Cosa stai cercando?" aria-label="Search">
+                <button class="cerca btn btn-light my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Naviga
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="{% url 'categorie' 'N' %}">Nike</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'categorie' 'A' %}">Adidas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'categorie' 'J' %}">Air Jordan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'categorie' 'L' %}">Luxury Brands</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'categorie' 'O' %}">Altri Brands</a>
+                    </div>
+                </li>
+                {% if request.user.is_authenticated %}
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ request.user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'user_profile' username=request.user.username %}">Profilo</a>
+                            <a  class="dropdown-item" href="{% url 'order-summary' %}"> Il mio carrello </a>
+                            <a class="dropdown-item" href="{% url 'address-page'  username=request.user.username %}">I miei indirizzi</a>
+                            <a  class="dropdown-item" href="{% url 'user-vendite' username=request.user.username %}"> Le mie vendite</a>
+                            <a  class="dropdown-item" href="{% url 'acquisti'%}"> I miei acquisti</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'password_change' %}">Aggiorna Password</a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Esci</a>
+                        </div>
+                    </li>
+                {% else %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'registration_view' %}">Registrazione</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="mt-5 pt-4">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    {% block content %}
+
+
+    {% endblock content %}
+</div>
+
+
+
+</body>
+
+
+
+<script>
+    $('.cerca').prop("disabled", true);
+    $('.inputCerca').keyup(function () {
+
+        var empty = false;
+        $('.inputCerca').each(function () {
+            if ($(this).val().length == 0) {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('.cerca').attr('disabled', 'disabled');
+        } else {
+            $('.cerca').attr('disabled', false);
+        }
+    });
+</script>
+{% block extra_scripts %}
+{% endblock %}
+
+</html>

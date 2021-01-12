@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/item.css' %}" />
+    <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+    <br>
+    <br>
+    <br>
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex justify-content-between justify-content-between">
+            <h2 class="col-9 font-weight-bold ">Dettagli dell'indirizzo selezionato</h2>
+        </div>
+        <span>Stato : {{object.stato}}</span>
+        <span>Città : {{object.città}}</span>
+        <span>Via e numero civico  : {{object.via}}</span>
+        <span>CAP: {{object.cap}}</span>
+        {% if object.interno %}
+            <span>Interno: {{object.interno}}</span>
+        {% else %}
+            <span>Interno: <a style="color: red">non specificato </a></span>
+        {% endif %}
+        {% if object.note %}
+            <span>Note: {{object.note}}</span>
+        {% else %}
+            <span>Note: <a style="color: red">nessuna nota presente </a></span>
+        {% endif %}
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

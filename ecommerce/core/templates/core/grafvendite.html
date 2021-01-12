@@ -1,0 +1,63 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+ <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+  <div id="container" style="width: 75%;">
+    <canvas id="population-chart" data-url="{% url 'user-grafico-vendite' username=request.user.username %}"></canvas>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+
+    $(function () {
+
+      var $populationChart = $("#population-chart");
+      $.ajax({
+        url: $populationChart.data("url"),
+        success: function (data) {
+
+          var key=[], value=[];
+            {% for  key, value in items %}
+                key.push({{ key }})
+                value.push({{ value }})
+            {% endfor %}
+
+           var ctx = $populationChart[0].getContext("2d");
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: key,
+              datasets: [{
+                label: 'vendite giorno',
+                backgroundColor: 'green',
+                data: value,
+              }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'le mie vendite mensili'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: Math.max.apply(null, value) + 3,
+                            min: 0,
+                            stepSize: 2
+                        }
+                    }]
+                }
+            }
+          });
+
+        }
+      });
+
+    });
+
+  </script>
+
+{% endblock %}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ba93ca2-a4fe-481c-9d99-d491c0762ad1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../WordCommunity/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ecommerce.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/address.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/address_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/address_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/modifica_address.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/migrations/0002_auto_20200928_1741.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/migrations/0003_remove_item_release.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/acquisti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/cerca.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/deleteitem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/grafvendite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/homepageCat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/item_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/modifica_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/ordine/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/ordine/order_summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/ordine/orderdisplay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/core/vendite_utente.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/164715669-bee1b10b-268f-4b39-835e-6229bc058282.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/164715669-bee1b10b-268f-4b39-835e-6229bc058282_rWuPhnD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/7a9e9a6700cae2d20feef5a9e9be310a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_1H1curU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_5bCvvnj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_FUNMp7t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_NMy6sv4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_ODj8q7S.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_QlfGs1n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_VDRwp9F.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_VXSqlwY.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_viA9MnN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_w0zFoXI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/Air-Jordan-1-Retro-High-Dior_yc0vV0Q.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/C_2_fotogallery_3088583_9_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/adidas-Yeezy-Boost-380-Alien-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/adidas-Yeezy-Boost-380-Alien-Product_Ism3PJb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/adidas-Yeezy-Boost-380-Alien-Product_RHCBkC1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/adidas-Yeezy-Boost-380-Alien-Product_s3E8dpq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/images_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/images_1Vdm4LD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/images_1_HU7jS4V.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/images_1_ehOjNQM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/images_AASQSDb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/milano-fashion-week-2018-620x340.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/milano-fashion-week-2018-620x340_V4agCcg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/stockx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media_root/stockx_7TPKMYq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/creaAnnuncio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/utente.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WordCommunity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WordCommunity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WordCommunity/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../WordCommunity/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FootX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/aggiungi_prodotto.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/aggiungi_prodotto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/profilo.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/profilo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media_root/images.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/articolo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/blacklist.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/classifica.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/crea_articolo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="identifier.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="7185e1bc-f945-4723-aaf2-5ee8e65d08d1" />
+    </checked>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ecommerce" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gJnuDymVK9cry4ekFPorVX3FE6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../esame_tw-master" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\core\templates\core" />
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\accounts\templates\accounts" />
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\static\img" />
+      <recent name="C:\Users\fedeb\PycharmProjects\ecommerce\core" />
+      <recent name="C:\Users\fedeb\PycharmProjects\ecommerce" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\core\templates\core\ordine" />
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\media" />
+      <recent name="C:\Users\fedeb\OneDrive\Documenti\GitHub\footlock\ecommerce\static\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.ecommerce">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FootX" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/accounts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/accounts/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ecommerce" type="Python.DjangoServer" factoryName="Django server">
+      <module name="FootX" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ecommerce.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ba93ca2-a4fe-481c-9d99-d491c0762ad1" name="Default Changelist" comment="" />
+      <created>1597841782782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597841782782</updated>
+      <workItem from="1597841833235" duration="6852000" />
+      <workItem from="1598104126388" duration="10458000" />
+      <workItem from="1598630156667" duration="4630000" />
+      <workItem from="1598707768363" duration="10557000" />
+      <workItem from="1598718420403" duration="1212000" />
+      <workItem from="1598722520406" duration="2134000" />
+      <workItem from="1599230578434" duration="2858000" />
+      <workItem from="1600337495117" duration="3228000" />
+      <workItem from="1600424387550" duration="4203000" />
+      <workItem from="1600433041818" duration="9043000" />
+      <workItem from="1600692473055" duration="10289000" />
+      <workItem from="1600768215553" duration="4182000" />
+      <workItem from="1600856119469" duration="2478000" />
+      <workItem from="1600861895690" duration="12143000" />
+      <workItem from="1600875899751" duration="596000" />
+      <workItem from="1600956031236" duration="7044000" />
+      <workItem from="1601305373538" duration="753000" />
+      <workItem from="1601306143906" duration="892000" />
+      <workItem from="1601307266478" duration="1504000" />
+      <workItem from="1601383769189" duration="4833000" />
+      <workItem from="1601543157730" duration="5435000" />
+      <workItem from="1601553877432" duration="4252000" />
+      <workItem from="1601640989753" duration="9281000" />
+      <workItem from="1601659861985" duration="1906000" />
+      <workItem from="1601735523950" duration="6357000" />
+      <workItem from="1601903603832" duration="9987000" />
+      <workItem from="1601985643213" duration="7692000" />
+      <workItem from="1602061798488" duration="2827000" />
+      <workItem from="1602165103568" duration="6232000" />
+      <workItem from="1602175874226" duration="4800000" />
+      <workItem from="1602247921784" duration="4930000" />
+      <workItem from="1602517088260" duration="15133000" />
+      <workItem from="1602580177888" duration="6033000" />
+      <workItem from="1602599812854" duration="3253000" />
+      <workItem from="1602607273504" duration="4330000" />
+      <workItem from="1602669915840" duration="4457000" />
+      <workItem from="1602690718708" duration="12771000" />
+      <workItem from="1602862360382" duration="5469000" />
+      <workItem from="1603035716623" duration="7229000" />
+      <workItem from="1603100325897" duration="4503000" />
+      <workItem from="1603108454005" duration="9659000" />
+      <workItem from="1603119351028" duration="6931000" />
+      <workItem from="1603187096678" duration="3996000" />
+      <workItem from="1603201335193" duration="2294000" />
+      <workItem from="1603209908869" duration="7997000" />
+      <workItem from="1603273271465" duration="5647000" />
+      <workItem from="1603287597704" duration="5929000" />
+      <workItem from="1603358255784" duration="5814000" />
+      <workItem from="1603369251583" duration="14065000" />
+      <workItem from="1603459389194" duration="14341000" />
+      <workItem from="1603548701772" duration="3542000" />
+      <workItem from="1603635064483" duration="6922000" />
+      <workItem from="1603710729534" duration="3210000" />
+      <workItem from="1603721420782" duration="9477000" />
+      <workItem from="1603731851444" duration="5883000" />
+      <workItem from="1604067733737" duration="4377000" />
+      <workItem from="1604240792813" duration="6876000" />
+      <workItem from="1604248670727" duration="1595000" />
+      <workItem from="1604326043634" duration="8875000" />
+      <workItem from="1604418518710" duration="3366000" />
+      <workItem from="1604588407751" duration="399000" />
+      <workItem from="1604678589013" duration="599000" />
+      <workItem from="1604933655810" duration="2073000" />
+      <workItem from="1604941573008" duration="280000" />
+      <workItem from="1605008164802" duration="624000" />
+      <workItem from="1605017326437" duration="1969000" />
+      <workItem from="1605089946724" duration="872000" />
+      <workItem from="1605100218005" duration="682000" />
+      <workItem from="1605101006869" duration="317000" />
+      <workItem from="1605111661518" duration="1956000" />
+      <workItem from="1605267692512" duration="3336000" />
+      <workItem from="1605276901822" duration="8684000" />
+      <workItem from="1605635050563" duration="1162000" />
+      <workItem from="1609752774197" duration="14199000" />
+      <workItem from="1609860860869" duration="13667000" />
+      <workItem from="1609955256023" duration="1724000" />
+      <workItem from="1610124360721" duration="7000" />
+      <workItem from="1610205702414" duration="3482000" />
+      <workItem from="1610376669327" duration="2781000" />
+      <workItem from="1610469701249" duration="1916000" />
+      <workItem from="1610473707694" duration="48000" />
+      <workItem from="1610473777375" duration="101000" />
+      <workItem from="1610474786428" duration="399000" />
+      <workItem from="1610476137309" duration="70000" />
+      <workItem from="1610476230142" duration="41000" />
+      <workItem from="1610476382745" duration="3550000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1610476855330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610476855330" />
+    <state width="1493" height="91" key="GridCell.Tab.0.bottom" timestamp="1610476577091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610476577091" />
+    <state width="1493" height="91" key="GridCell.Tab.0.center" timestamp="1610476577090">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610476577090" />
+    <state width="1493" height="91" key="GridCell.Tab.0.left" timestamp="1610476577090">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610476577090" />
+    <state width="1493" height="91" key="GridCell.Tab.0.right" timestamp="1610476577091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610476577091" />
+    <state x="84" y="77" key="SettingsEditor" timestamp="1604241459458">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="84" y="77" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604241459458" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1610476384419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1610476384419" />
+    <state x="804" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604328733163">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="804" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1604328733163" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602252264948">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602252264948" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ecommerce$models.coverage" NAME="models Coverage Results" MODIFIED="1609760548714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/accounts" />
+  </component>
+</project>

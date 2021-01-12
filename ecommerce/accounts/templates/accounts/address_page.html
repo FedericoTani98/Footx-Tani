@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <br>
+    <br>
+    <br>
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h2 class="m-0 font-weight-bold ">Indirizzi di {{ user }} </h2>
+                 <i class="fa fa-info-circle" data-toggle="tooltip"  title="Si può avere un solo indirizzo di default per le spedizioni"></i>
+        </div>
+
+
+        <!-- Card Body -->
+        <div class="card-body d-inline p-2">
+
+
+            {% for address in address_utente%}
+
+                <div class="card " style="display: inline-block;width: 33%;">
+                    <div class="card-body">
+                        <h4 class="card-subtitle mb-2 text-muted"> Città: {{address.città}} </h4>
+                        <h6 class="card-subtitle mb-2 text-muted">  Via {{ address.via}} </h6>
+
+                        <br>
+                        <a class="btn btn-danger float-right" href=" {%  url 'address-delete' address.id %}">
+                            <i class='far fa-trash-alt'></i>
+                        </a>
+                        <a class="btn btn-primary"
+                           href="{% url 'address'  address.id %}">
+                            <i class='far fa-clipboard'></i>
+                        </a>
+                        <a class="btn btn-warning" href=" {%  url 'address-modifica' address.id %}">
+                            <i class='far fa-edit'></i>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+
+{% endblock content %}

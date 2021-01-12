@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <button class="btn btn-success" onclick="window.history.go(-1);">Torna al carrello</button>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    {% load crispy_forms_tags %}
+
+
+    <main>
+        <br>
+
+        <div class="container wow fadeIn">
+            <form method="POST" >
+                {% csrf_token %}
+                <div class="card">
+                    <!-- Address form -->
+
+                    <h2>Indirizzo</h2>
+
+                    <div class='hideable_shipping_form'>
+                        <!-- region input-->
+                        <div class="control-group">
+                            <label class="control-label">Stato/Nazione</label>
+                            <div class="controls">
+                                {{ form.stato }}
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- city input-->
+                        <div class="control-group">
+                            <label class="control-label">Citta/Paese</label>
+                            <div class="controls">
+                                {{ form.città }}
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- postal-code input-->
+                        <div class="control-group">
+                            <label class="control-label">CAP/codice zip</label>
+                            <div class="controls">
+                                {{ form.cap }}
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <label class="control-label">Via e numero civico</label>
+                            <div class="controls">
+                                {{ form.via }}
+                                <p class="help-block">Strada, P.O. box, ecc.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <label class="control-label">Interno</label>
+                            <div class="controls">
+                                {{ form.interno }}
+                                <p class="help-block">Appartamento, suite, etc.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <label class="control-label">Eventuali note</label>
+                            <div class="controls">
+                                {{ form.note }}
+                                <p class="help-block">Nome campanello, orari di consegna, etc.</p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="save_info" id="save_info">
+                  <label class="custom-control-label" for="save_info">Salva questo indirizzo come default</label>
+                </div>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="use_default_shipping" id="use_default_shipping">
+                        <label class="custom-control-label" for="use_default_shipping">Utilizza l'indirizzo di default con città: {{ default_shipping_address.città }}</label>
+                    </div>
+                    <br>
+                    <h2>Metodo di pagamento</h2>
+                    <p>Scegli il metodo di pagamento che vuoi utilizzare</p>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            {{ form.opzioni_pagamento }}
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-warning" type="submit">Invia l'ordine</button>
+
+                <hr>
+            </form>
+        </div>
+    </main>
+{% endblock content %}
+
+<!-- Script per mostrare o meno il form address se viene selezionato l'indirizzo di default -->
+{% block extra_scripts %}
+    <script>
+        var hideable_shipping_form = $('.hideable_shipping_form');
+
+        var use_default_shipping = document.querySelector("input[name=use_default_shipping]");
+
+        use_default_shipping.addEventListener('change',function () {
+            if (this.checked){
+                hideable_shipping_form.hide();
+            }else{
+                hideable_shipping_form.show();
+            }
+        })
+    </script>
+
+{% endblock extra_scripts %}

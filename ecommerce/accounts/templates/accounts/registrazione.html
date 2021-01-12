@@ -1,0 +1,36 @@
+
+<!--estendo html padre , cosi non riscrivo pezzi di html gia scritti precede..-->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ block.super}} - Registrati {% endblock head_title %}
+{% block content %}
+<div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+          <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7U6PpycTRNE21khwVjBW2p0uJ-WVM3wwBew&usqp=CAU);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat"></div>
+          <div class="col-lg-7">
+            <div class="p-5">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Crea un Account!</h1>
+              </div>
+             <form class="" method="POST" novalidate>
+            {% csrf_token %}
+            {{form|crispy}}
+            <br>
+            <input type="submit" class="btn btn-success" value="Crea Account">
+
+        </form>
+              <hr>
+              <div class="text-center">
+                <a  href="{% url 'login' %}">Hai gia un account? Vai al Login!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ block.super}} - Registrati nella Comminuty{% endblock head_title %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-6 text-center">
+        <p>Logout effettuato con successo</p>
+        <br>
+        <a href="{% url 'login' %}">Clicca qui per riaccedere</a>
+     
+    </div>
+
+</div>
+        
+{% endblock content %}

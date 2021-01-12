@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Cerca nel Forum{% endblock head_title %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <h1 class="mt-3">Risultati della Ricerca</h1>
+
+    <main>
+
+        <div class="container">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+                <!-- Navbar brand -->
+                <span class="navbar-brand">Categorie:</span>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Tutti
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- Links -->
+
+
+
+
+
+
+
+                    <!-- Collapsible content -->
+
+                </div>
+            </nav>
+
+            <br>
+            {% if  not items %}
+                {% if not users %}
+                    <h4 class="text-muted">La ricerca non ha prodotto risultati! </h4>
+                {% endif %}
+            {% endif %}
+            <!--Section: Products v.3-->
+            <section class="text-center mb-4">
+
+                <div class="row wow fadeIn">
+                    {% if items %}
+                        {% for item in items%}
+                            <div class="col-lg-3 col-md-6 mb-4">
+
+                                <div class="card">
+
+                                    <div class="view overlay">
+                                        {% if item.immagine %}
+                                            <img src="{{ item.immagine.url }}" class="card-img-top" >
+                                        {% endif %}
+                                        <a href="{{ item.get_absolute_url }}">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <div class="card-body text-center">
+
+                                        <h3>{{ item.get_categoria_display }}</h3>
+
+                                        <h5>
+                                            <strong>
+                                                <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.nome }}
+                                                </a>
+                                            </strong>
+                                        </h5>
+
+                                        <h4 class="font-weight-bold blue-text">
+                                            <strong>
+                                                {% if item.discount_prezzo %}
+                                                    {{ item.discount_prezzo }}
+                                                {% else %}
+                                                    {{ item.prezzo }} € {% if item.condizioni == 'U' %}
+                                                    <h6  style="color: red"> {{ item.get_condizioni_display }} </h6>
+                                                {% else %}
+                                                    <h6  style="color: green"> {{ item.get_condizioni_display }} </h6>
+                                                {% endif %}
+                                                {% endif %}
+                                            </strong>
+
+                                        </h4>
+                                        <p class="text-muted">{{ item.data|timesince }} fa</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+
+            </section>
+            <!--Section: Products v.3-->
+
+            <section class="text-center mb-4">
+
+                <div class="row wow fadeIn">
+                    {% if users %}
+                        {% for utente  in users %}
+                            <div class="col-lg-3 col-md-6 mb-4">
+
+                                <div class="card">
+
+                                    <div class="view overlay">
+                                        <img src="{% static "/img/utente.jpg" %}" alt="My image"  class="card-img-top" >
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5>
+                                            <strong>
+                                                {% if  utente.pk == request.user.pk %}
+                                                    <p><a href="{% url 'user_profile' username=request.user.username %}">@{{ utente }}</a></p>
+                                                {% else %}
+                                                    <p><a href="{% url 'altriuser-profile' username=utente.username %}">@{{ utente }}</a></p>
+                                                {% endif %}
+                                                </a>
+                                            </strong>
+                                        </h5>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+
+            </section>
+            <!--Pagination-->
+
+            {% if is_paginated %}
+                <nav class="d-flex justify-content-center wow fadeIn">
+                    <ul class="pagination pg-blue">
+
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+        </div>
+    </main>
+{% endblock content %}

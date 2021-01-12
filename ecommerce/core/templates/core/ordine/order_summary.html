@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+
+     {% load crispy_forms_tags %}
+    <main>
+        <h2>Riepilogo dell'ordine</h2>
+        <br>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col"> Nome</th>
+                <th scope="col"> Taglia</th>
+                <th scope="col"> Condizione</th>
+                <th scope="col"> Prezzo</th>
+                <th scope="col"> Elimina</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order_item in object.items.all%}
+                <tr>
+                    <td>{{ order_item.product.nome }}</td>
+                    <td>{{ order_item.product.tagliaEU }}</td>
+                    <td>{% if order_item.product.condizioni == 'U' %}
+                        <h6  style="color: red"> {{ order_item.product.get_condizioni_display }} </h6>
+                    {% else %}
+                        <h6  style="color: green"> {{ order_item.product.get_condizioni_display }} </h6>
+                    {% endif %} </td>
+                    <td>{{ order_item.product.prezzo}} €</td>
+                    <td> <a href="{{ order_item.product.get_remove_from_cart_url }}" class="btn btn-danger"><i class='far fa-trash-alt'></i></a></td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5"> Il carrello è vuoto</td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <a class='btn btn-success float-right' href="/">Continua lo shopping</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% if object.get_total%}
+                <tr>
+                    <td colspan="3"><b> Totale</b> </td>
+                    <td><b>{{ object.get_total }} € </b></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        <a class='btn btn-warning float-right ml-2' href='{% url 'checkout' %}'>Checkout</a>
+                        <a class='btn btn-success float-left' href="/">Continua lo shopping</a>
+                    </td>
+                </tr>
+            {% endif %}
+            </tbody>
+        </table>
+
+
+
+
+
+    </main>
+
+{% endblock content %}

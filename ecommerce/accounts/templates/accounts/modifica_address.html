@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+{%  load static %}
+{%  load crispy_forms_tags%}
+
+
+{% block content %}
+
+
+<div class="card " style="display: inline-block;width: 33%;">
+        <div class="card-body">
+        <h4 class="card-title">Vuoi cambiare l'indirizzo selezionato? </h4>
+       <form method="post">{%  csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-success" type="submit" value="Salva modifiche">
+           <a class="btn btn-secondary float-right" href="{%  url 'address-page' username=request.user.username %}">Annulla</a>
+      </form>
+
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/item.css' %}" />
+    <button class="btn btn-success" onclick="window.history.go(-1);">Indietro</button>
+    <br>
+    <br>
+    <br>
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex justify-content-between justify-content-between">
+            <h2 class="col-9 font-weight-bold ">{{item.nome}}</h2>
+        </div>
+
+
+        <!-- Card Body -->
+        <div class="card-body d-inline p-2">
+            <h3 class=" mb-2">Venditore: <strong>
+                <a href="{% url 'user_profile' item.autore_vendita %}"  class="dark-grey-text"> @{{item.autore_vendita}} </a>
+            </strong>  || Categoria: <strong><a href="{% url 'categorie' item.categoria %}"  class="dark-grey-text">{{ item.get_categoria_display}} </a> </strong></h3>
+            <div>
+
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div class="container-fliud">
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+
+                                <ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="{{item.immagine.url }}" /></a></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="details col-md-6">
+                              <br>
+
+                                <h4 class="price">Prezzo : <span>{{item.prezzo}} €</span></h4>
+                                <h5 class="sizes">Taglia(EU):  {{item.tagliaEU}}
+
+                                </h5>
+                                {% if item.condizioni == 'U' %}
+                                    <h6  style="color: red"> {{ item.get_condizioni_display }} </h6>
+                                {% else %}
+                                    <h6  style="color: green"> {{ item.get_condizioni_display }} </h6>
+                                {% endif %}
+                            <p class="product-description"><strong>Descrizione:</strong> {{item.descrizione}}</p>
+                                <div class="action">
+                                    <br>
+                                    <br>
+                                    {% if not item.ordered  %}
+                                    <a href="{{ object.get_add_to_cart_url }}" class="btn btn-warning">Aggiungi al carrello</a>
+                                    <!-- <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger">Rimuovi dal carrello</a> -->
+
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock content %}
