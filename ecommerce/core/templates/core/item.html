@@ -56,11 +56,12 @@
                                 <div class="action">
                                     <br>
                                     <br>
+                                    {% if item.autore_vendita.username  != request.user.username %}
                                     {% if not item.ordered  %}
                                     <a href="{{ object.get_add_to_cart_url }}" class="btn btn-warning">Aggiungi al carrello</a>
                                     <!-- <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger">Rimuovi dal carrello</a> -->
-
                                     {% endif %}
+                                {% endif %}
                                 </div>
                             </div>
                         </div>

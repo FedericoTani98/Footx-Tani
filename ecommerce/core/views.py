@@ -127,11 +127,12 @@ def homeview(request):
     recommendation_list = sorted(recommendation_list, key=lambda item: (item.prezzo)) #ordino gli item consigliati da quello con prezzo minore
     convenientinew_list = sorted(convenientinew_list, key=lambda item: (item.prezzo))
     convenientiused_list = sorted(convenientiused_list, key=lambda item: (item.prezzo))
+
     context = {
         'object_list': object_list,
         "object_list": page_obj,
         "page_obj": page_obj,
-        "recommendation_list":recommendation_list ,
+        "recommendation_list":recommendation_list,
         "convenientinew_list":convenientinew_list,
         "convenientiused_list":convenientiused_list
     }
