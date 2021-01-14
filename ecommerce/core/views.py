@@ -36,12 +36,9 @@ class AllItemView(ListView):
 def homeview(request):
 
     object_list = Item.objects.filter( ordered=False).order_by("-pk")
-    paginator = Paginator(object_list, 4)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-
-
-
+    #paginator = Paginator(object_list, 4)
+    #page_number = request.GET.get('page')
+    #page_obj = paginator.get_page(page_number)
     #print(context)
     if(request.user.is_authenticated):
         item_consigliati = ItemConsigliato.objects.filter( user = request.user)
@@ -130,8 +127,6 @@ def homeview(request):
 
     context = {
         'object_list': object_list,
-        "object_list": page_obj,
-        "page_obj": page_obj,
         "recommendation_list":recommendation_list,
         "convenientinew_list":convenientinew_list,
         "convenientiused_list":convenientiused_list
