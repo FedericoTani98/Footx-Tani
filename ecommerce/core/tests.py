@@ -34,7 +34,6 @@ class CoreCase(TestCase):
                                         via="n",
                                         interno="3",
                                         note="ciao")
-
         self.user2 = User.objects.create_user(username='dummy2', email='dummy@dummy.com', password='dummypassword')
         self.credential2 = {'username': 'dummy2', 'password': 'dummypassword'}
 

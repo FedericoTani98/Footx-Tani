@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6ba93ca2-a4fe-481c-9d99-d491c0762ad1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/acquisti.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/acquisti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/cerca.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/cerca.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/homepageCat.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/homepageCat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/item_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/item_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/profilo.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/profilo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +244,9 @@
       <workItem from="1610480814844" duration="33000" />
       <workItem from="1610525378084" duration="2427000" />
       <workItem from="1610528021727" duration="83000" />
-      <workItem from="1610553081780" duration="349000" />
+      <workItem from="1610553081780" duration="517000" />
+      <workItem from="1610554381220" duration="2179000" />
+      <workItem from="1610625146130" duration="4671000" />
     </task>
     <servers />
   </component>
@@ -246,30 +258,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610527446185" />
-    <state width="726" height="90" key="GridCell.Tab.0.bottom" timestamp="1610528104591">
+    <state width="726" height="90" key="GridCell.Tab.0.bottom" timestamp="1610553603724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="90" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610528104591" />
-    <state width="726" height="90" key="GridCell.Tab.0.center" timestamp="1610528104591">
+    <state width="726" height="90" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610553603724" />
+    <state width="726" height="90" key="GridCell.Tab.0.center" timestamp="1610553603723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="90" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610528104591" />
-    <state width="726" height="90" key="GridCell.Tab.0.left" timestamp="1610528104591">
+    <state width="726" height="90" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610553603723" />
+    <state width="726" height="90" key="GridCell.Tab.0.left" timestamp="1610553603723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="90" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610528104591" />
-    <state width="726" height="90" key="GridCell.Tab.0.right" timestamp="1610528104591">
+    <state width="726" height="90" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610553603723" />
+    <state width="726" height="90" key="GridCell.Tab.0.right" timestamp="1610553603724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="90" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610528104591" />
+    <state width="726" height="90" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610553603724" />
     <state x="84" y="77" key="SettingsEditor" timestamp="1604241459458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="84" y="77" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604241459458" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1610553145983">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1610625148368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1610553145983" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1610625148368" />
     <state x="804" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604328733163">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

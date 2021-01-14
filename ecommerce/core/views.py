@@ -124,9 +124,9 @@ def homeview(request):
             convenientiused_list.append(it)
 
 
-    recommendation_list = sorted(recommendation_list, key=lambda item: (item.prezzo)) #ordino gli item consigliati da quello con prezzo minore
-    convenientinew_list = sorted(convenientinew_list, key=lambda item: (item.prezzo))
-    convenientiused_list = sorted(convenientiused_list, key=lambda item: (item.prezzo))
+    recommendation_list = sorted(recommendation_list[:4], key=lambda item: (item.prezzo)) #ordino gli item consigliati da quello con prezzo minore
+    convenientinew_list = sorted(convenientinew_list[:4], key=lambda item: (item.prezzo))
+    convenientiused_list = sorted(convenientiused_list[:4], key=lambda item: (item.prezzo))
 
     context = {
         'object_list': object_list,
@@ -602,10 +602,14 @@ class AcquistiView(View):
         user_id = self.request.user.id
         user = User.objects.get(id=user_id)
         acquisti = Payment.objects.filter(user=user).order_by("-pk")
+        paginator = Paginator(acquisti, 10)  # Show 10 contacts per page.
+        page_number = self.request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
 
         context = {
             'User': user,
-            'listacquisti': acquisti,
+            'listacquisti': page_obj,
+            'page_obj': page_obj
         }
         return render(self.request, 'core/acquisti.html', context)
 
